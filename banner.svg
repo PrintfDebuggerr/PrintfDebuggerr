@@ -1,0 +1,340 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { background: #0d1117; font-family: 'Space Mono', monospace; color: #c9d1d9; }
+
+.readme-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tab-bar {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 8px 16px 0;
+  display: flex; gap: 0;
+}
+.tab {
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #8b949e;
+  border: 1px solid transparent;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+}
+.tab.active {
+  background: #0d1117;
+  border-color: #30363d;
+  border-bottom-color: #0d1117;
+  color: #c9d1d9;
+  margin-bottom: -1px;
+}
+
+.content { padding: 32px; }
+
+/* ---- BANNER SVG ---- */
+.banner-wrap {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.banner-svg {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@keyframes slide-in { from { transform: translateY(-30px); opacity:0 } to { transform: translateY(0); opacity:1 } }
+@keyframes fade-up  { from { transform: translateY(20px);  opacity:0 } to { transform: translateY(0); opacity:1 } }
+@keyframes blink    { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes glow-pulse { 0%,100%{opacity:.6} 50%{opacity:1} }
+@keyframes scan     { from{transform:translateY(0)} to{transform:translateY(180px)} }
+@keyframes orbit    { from{transform:rotate(0deg) translateX(90px) rotate(0deg)} to{transform:rotate(360deg) translateX(90px) rotate(-360deg)} }
+@keyframes orbit2   { from{transform:rotate(180deg) translateX(70px) rotate(-180deg)} to{transform:rotate(540deg) translateX(70px) rotate(-540deg)} }
+@keyframes orbit3   { from{transform:rotate(60deg) translateX(55px) rotate(-60deg)} to{transform:rotate(420deg) translateX(55px) rotate(-420deg)} }
+@keyframes type-cursor { 0%,100%{opacity:1} 49%{opacity:1} 50%{opacity:0} 99%{opacity:0} }
+@keyframes shimmer  { from{transform:translateX(-100%)} to{transform:translateX(400%)} }
+@keyframes float-tag { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+/* ---- SECTIONS ---- */
+.section { margin-bottom: 28px; }
+
+.section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #e6edf3;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section h2 .icon { font-size: 14px; }
+
+ul.about-list { list-style: none; padding: 0; }
+ul.about-list li {
+  font-size: 13px;
+  color: #8b949e;
+  padding: 4px 0 4px 20px;
+  position: relative;
+}
+ul.about-list li::before {
+  content: '▸';
+  position: absolute; left: 0;
+  color: #00C2FF;
+}
+
+.badge-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #161b22; border: 1px solid #30363d;
+  border-radius: 6px; padding: 5px 10px;
+  font-size: 12px; color: #8b949e;
+  transition: border-color .2s, color .2s;
+}
+.badge:hover { border-color: #00C2FF; color: #e6edf3; }
+.badge .dot { width: 8px; height: 8px; border-radius: 50%; }
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.stat-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.stat-card img { width: 100%; display: block; }
+
+.contact-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.contact-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s, opacity .15s;
+}
+.contact-btn:hover { transform: translateY(-2px); opacity: .85; }
+.contact-btn.linkedin { background: #0077B5; color: #fff; }
+.contact-btn.gmail { background: #D14836; color: #fff; }
+
+hr.divider {
+  border: none;
+  border-top: 1px solid #30363d;
+  margin: 24px 0;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.focus-item {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #8b949e;
+  display: flex; align-items: center; gap: 8px;
+  transition: border-color .2s;
+}
+.focus-item:hover { border-color: #238636; }
+.focus-item .bullet { color: #2ea043; font-size: 10px; }
+</style>
+
+<div class="readme-wrap">
+  <div class="tab-bar">
+    <div class="tab active">README.md</div>
+    <div class="tab">Code</div>
+    <div class="tab">Issues</div>
+  </div>
+  <div class="content">
+
+    <!-- BANNER -->
+    <div class="banner-wrap">
+      <svg class="banner-svg" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0d1117"/>
+            <stop offset="100%" stop-color="#0a0f1a"/>
+          </linearGradient>
+          <linearGradient id="shimmer-grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="transparent"/>
+            <stop offset="50%" stop-color="rgba(0,194,255,0.15)"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </linearGradient>
+          <clipPath id="banner-clip"><rect width="700" height="200" rx="12"/></clipPath>
+        </defs>
+
+        <g clip-path="url(#banner-clip)">
+          <!-- BG -->
+          <rect width="700" height="200" fill="url(#bg-grad)"/>
+
+          <!-- Grid dots -->
+          <g opacity="0.08">
+            <rect x="50" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="100" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="150" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="200" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="250" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="50" y="80" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="100" y="80" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="150" y="80" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="50" y="120" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="100" y="120" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="450" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="500" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="550" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="600" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="650" y="40" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="450" y="80" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="500" y="80" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="550" y="80" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="450" y="120" width="2" height="2" rx="1" fill="#00C2FF"/>
+            <rect x="500" y="120" width="2" height="2" rx="1" fill="#00C2FF"/>
+          </g>
+
+          <!-- Orbit rings (decorative left) -->
+          <circle cx="90" cy="100" r="90" fill="none" stroke="#00C2FF" stroke-width="0.4" opacity="0.15"/>
+          <circle cx="90" cy="100" r="70" fill="none" stroke="#00C2FF" stroke-width="0.3" opacity="0.1"/>
+          <circle cx="90" cy="100" r="55" fill="none" stroke="#00C2FF" stroke-width="0.3" opacity="0.08"/>
+
+          <!-- Orbiting dots -->
+          <g transform="translate(90,100)">
+            <g style="animation: orbit 8s linear infinite; transform-origin: 0 0">
+              <circle cx="0" cy="0" r="3" fill="#00C2FF" opacity="0.8"/>
+            </g>
+            <g style="animation: orbit2 12s linear infinite; transform-origin: 0 0">
+              <circle cx="0" cy="0" r="2" fill="#7C3AED" opacity="0.7"/>
+            </g>
+            <g style="animation: orbit3 6s linear infinite; transform-origin: 0 0">
+              <circle cx="0" cy="0" r="2" fill="#00C2FF" opacity="0.5"/>
+            </g>
+          </g>
+
+          <!-- Scan line -->
+          <g opacity="0.04" style="animation: scan 3s ease-in-out infinite alternate">
+            <rect x="0" y="0" width="700" height="3" fill="#00C2FF"/>
+          </g>
+
+          <!-- Shimmer sweep -->
+          <rect x="0" y="0" width="175" height="200" fill="url(#shimmer-grad)" style="animation: shimmer 4s ease-in-out infinite 1s"/>
+
+          <!-- Main text area -->
+          <text x="350" y="72" text-anchor="middle" font-family="'Space Mono', monospace" font-size="13" fill="#00C2FF" opacity="0.7" letter-spacing="8" style="animation: fade-up .8s ease both .2s">COMPUTER ENGINEERING</text>
+
+          <text x="350" y="118" text-anchor="middle" font-family="'Syne', sans-serif" font-size="46" font-weight="800" fill="#e6edf3" letter-spacing="-1" style="animation: slide-in .7s ease both">Şahan</text>
+
+          <rect x="245" y="128" width="210" height="2" rx="1" fill="url(#shimmer-grad)" opacity="0.6"/>
+
+          <!-- Tags row -->
+          <g style="animation: fade-up .8s ease both .5s; opacity:0; animation-fill-mode:forwards">
+            <!-- Tag 1 -->
+            <rect x="186" y="142" width="88" height="22" rx="4" fill="#00C2FF" fill-opacity="0.08" stroke="#00C2FF" stroke-width="0.6" stroke-opacity="0.4"/>
+            <text x="230" y="157" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#00C2FF" letter-spacing="1">SHOPIFY DEV</text>
+            <!-- Tag 2 -->
+            <rect x="284" y="142" width="64" height="22" rx="4" fill="#7C3AED" fill-opacity="0.12" stroke="#7C3AED" stroke-width="0.6" stroke-opacity="0.5"/>
+            <text x="316" y="157" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#a78bfa" letter-spacing="1">AI BUILDER</text>
+            <!-- Tag 3 -->
+            <rect x="358" y="142" width="76" height="22" rx="4" fill="#2ea043" fill-opacity="0.1" stroke="#2ea043" stroke-width="0.6" stroke-opacity="0.4"/>
+            <text x="396" y="157" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#3fb950" letter-spacing="1">FREELANCER</text>
+          </g>
+
+          <!-- Cursor blink -->
+          <rect x="504" y="102" width="3" height="28" rx="1" fill="#00C2FF" style="animation: blink 1s step-end infinite"/>
+
+          <!-- Bottom border glow -->
+          <rect x="0" y="196" width="700" height="4" fill="#00C2FF" opacity="0.3" style="animation: glow-pulse 2s ease-in-out infinite"/>
+        </g>
+      </svg>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Hakkımda -->
+    <div class="section">
+      <h2><span class="icon">👾</span> Hakkımda</h2>
+      <ul class="about-list">
+        <li>Bilgisayar mühendisliği öğrencisiyim</li>
+        <li>Shopify geliştirme ve freelance işler yapıyorum</li>
+        <li>Uzun vadede AI alanında güçlü bir kariyer kurmak istiyorum</li>
+        <li>Ürün geliştirme, otomasyon ve problem çözme ilgimi çekiyor</li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Tech Stack -->
+    <div class="section">
+      <h2><span class="icon">⚡</span> Tech Stack</h2>
+      <div class="badge-row">
+        <span class="badge"><span class="dot" style="background:#3776AB"></span>Python</span>
+        <span class="badge"><span class="dot" style="background:#F7DF1E"></span>JavaScript</span>
+        <span class="badge"><span class="dot" style="background:#3178C6"></span>TypeScript</span>
+        <span class="badge"><span class="dot" style="background:#61DAFB"></span>React</span>
+        <span class="badge"><span class="dot" style="background:#339933"></span>Node.js</span>
+        <span class="badge"><span class="dot" style="background:#96BF48"></span>Shopify</span>
+        <span class="badge"><span class="dot" style="background:#47A248"></span>MongoDB</span>
+        <span class="badge"><span class="dot" style="background:#F05032"></span>Git</span>
+        <span class="badge"><span class="dot" style="background:#2496ED"></span>Docker</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Stats -->
+    <div class="section">
+      <h2><span class="icon">📊</span> GitHub Stats</h2>
+      <div class="stats-row">
+        <div class="stat-card">
+          <img src="https://github-readme-stats.vercel.app/api?username=shahanmelody&show_icons=true&theme=tokyonight&hide_border=true&bg_color=161b22&title_color=00C2FF&icon_color=00C2FF&text_color=c9d1d9" alt="stats"/>
+        </div>
+        <div class="stat-card">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shahanmelody&layout=compact&theme=tokyonight&hide_border=true&bg_color=161b22&title_color=00C2FF&text_color=c9d1d9" alt="langs"/>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Current Focus -->
+    <div class="section">
+      <h2><span class="icon">🎯</span> Current Focus</h2>
+      <div class="focus-grid">
+        <div class="focus-item"><span class="bullet">●</span> AI tarafında derinleşmek</div>
+        <div class="focus-item"><span class="bullet">●</span> Daha iyi projeler build etmek</div>
+        <div class="focus-item"><span class="bullet">●</span> Freelance'den ürün işine geçmek</div>
+        <div class="focus-item"><span class="bullet">●</span> Open source'a katkı sağlamak</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Contact -->
+    <div class="section">
+      <h2><span class="icon">📬</span> Contact</h2>
+      <div class="contact-row">
+        <a class="contact-btn linkedin" href="#">LinkedIn</a>
+        <a class="contact-btn gmail" href="#">Gmail</a>
+      </div>
+    </div>
+
+  </div>
+</div>
