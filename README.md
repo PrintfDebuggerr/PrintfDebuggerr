@@ -18,7 +18,7 @@
 
 ## ⚡ Tech Stack
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,js,ts,react,nodejs,shopify,mongodb,git,github,docker" />
+  <img src="https://skillicons.dev/icons?i=python,js,ts,react,nodejs,mongodb,git,github,docker" />
 </p>
 
 ---
@@ -49,10 +49,10 @@
 
 ## 📬 Contact
 <p align="left">
-  <a href="https://www.linkedin.com/in/SENIN_LINKEDIN/">
+  <a href="[https://www.linkedin.com/in/SENIN_LINKEDIN/](https://www.linkedin.com/in/%C5%9Fahan-%C3%B6zt%C3%BCrk-027844208/)">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:SENINMAIL@gmail.com">
+  <a href="mailto:sahan.ozturkk@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
 </p>
