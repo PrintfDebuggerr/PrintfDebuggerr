@@ -1,8 +1,4 @@
 <div align="center">
-  <img src="./coding.gif" width="700" alt="coding"/>
-</div>
-
-<div align="center">
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=00C2FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Şahan;Computer+Engineering+Student;Shopify+Developer;AI+Builder;Freelancer+and+Problem+Solver" alt="Typing SVG" />
 </div>
 
@@ -14,6 +10,10 @@
 - Building a strong career in AI long-term
 - Passionate about product development, automation and problem solving
 
+---
+<div align="center">
+  <img src="./coding.gif" width="700" alt="coding"/>
+</div>
 ---
 
 ## ⚡ Tech Stack
