@@ -1,62 +1,58 @@
 <div align="center">
+  <img src="./coding.gif" width="700" alt="coding"/>
+</div>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=00C2FF&center=true&vCenter=true&width=700&lines=Selam%2C+ben+%C5%9Eahan;Computer+Engineering+Student;Shopify+Developer;AI+Builder;Freelancer+and+Problem+Solver" alt="Typing SVG" />
-
+<div align="center">
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=00C2FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Şahan;Computer+Engineering+Student;Shopify+Developer;AI+Builder;Freelancer+and+Problem+Solver" alt="Typing SVG" />
 </div>
 
 ---
 
-## Hakkımda
-
-- Bilgisayar mühendisliği öğrencisiyim
-- Shopify geliştirme ve freelance işler yapıyorum
-- Uzun vadede AI alanında güçlü bir kariyer kurmak istiyorum
-- Ürün geliştirme, otomasyon ve problem çözme ilgimi çekiyor
+## 👾 About Me
+- Computer engineering student
+- Working on Shopify development and freelance projects
+- Building a strong career in AI long-term
+- Passionate about product development, automation and problem solving
 
 ---
 
-## Tech Stack
-
+## ⚡ Tech Stack
 <p align="left">
   <img src="https://skillicons.dev/icons?i=python,js,ts,react,nodejs,shopify,mongodb,git,github,docker" />
 </p>
 
 ---
 
-## Öne Çıkan Alanlar
-
-- Shopify tema geliştirme
-- E-ticaret otomasyonları
-- AI destekli ürün fikirleri
+## 🚀 Areas of Focus
+- Shopify theme development
+- E-commerce automations
+- AI-powered product ideas
 - React / web development
-- API entegrasyonları
+- API integrations
 
 ---
 
-## GitHub Stats
-
+## 📊 GitHub Stats
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=SENIN_USERNAME&show_icons=true&theme=tokyonight" />
-  <img width="37%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SENIN_USERNAME&layout=compact&theme=tokyonight" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=PrintfDebuggerr&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img width="37%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PrintfDebuggerr&layout=compact&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
 
-## Current Focus
-
-- AI tarafında derinleşmek
-- Daha iyi projeler build etmek
-- Freelance’den ürün işine geçmek
+## 🎯 Current Focus
+- Going deeper on the AI side
+- Building better products
+- Transitioning from freelance to product business
 
 ---
 
-## Contact
-
+## 📬 Contact
 <p align="left">
   <a href="https://www.linkedin.com/in/SENIN_LINKEDIN/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:SENINMAILIN@gmail.com">
+  <a href="mailto:SENINMAIL@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
 </p>
